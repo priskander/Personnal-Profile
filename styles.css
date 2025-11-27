@@ -1,40 +1,53 @@
-<style>
-        /* Custom Styles for a professional, slightly dark theme aesthetic */
+body > header {
+  vertical-align: middle;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+h1 {
+  line-height: 1.1;
+}
+header p {
+  margin: 5px 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+
+/* Custom Styles for a professional, slightly dark theme aesthetic */
+body {
+        font-family: 'Inter', sans-serif;
+        @apply bg-gray-50 text-gray-800;
+        }
+/* Dark mode styling */
+@media (prefers-color-scheme: dark) {
         body {
-            font-family: 'Inter', sans-serif;
-            @apply bg-gray-50 text-gray-800;
+        @apply bg-gray-900 text-gray-100;
         }
-        /* Dark mode styling */
-        @media (prefers-color-scheme: dark) {
-            body {
-                @apply bg-gray-900 text-gray-100;
-            }
-            .card {
-                @apply bg-gray-800 shadow-xl shadow-gray-700/50;
-            }
-            .header-bg {
-                @apply bg-gray-800 border-b border-gray-700;
-            }
+.card {
+        @apply bg-gray-800 shadow-xl shadow-gray-700/50;
         }
-        .header-bg {
-            @apply bg-white border-b border-gray-200;
+.header-bg {
+        @apply bg-gray-800 border-b border-gray-700;
         }
-        .text-primary {
-            @apply text-blue-600 dark:text-blue-400;
         }
-        .card {
-            @apply bg-white p-6 rounded-xl shadow-lg transition-transform duration-300 hover:shadow-2xl hover:scale-[1.02];
+.header-bg {
+        @apply bg-white border-b border-gray-200;
         }
-        .cta-button {
-            @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm transition duration-300;
+.text-primary {
+        @apply text-blue-600 dark:text-blue-400;
         }
-        .cta-primary {
-            @apply bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600;
+.card {
+        @apply bg-white p-6 rounded-xl shadow-lg transition-transform duration-300 hover:shadow-2xl hover:scale-[1.02];
         }
-        .cta-secondary {
-            @apply bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 dark:border-gray-600;
+.cta-button {
+        @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm transition duration-300;
         }
-    </style>
+.cta-primary {
+        @apply bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600;
+        }
+.cta-secondary {
+        @apply bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 dark:border-gray-600;
+        }
 
 table {
   border: 1px solid #efac2f;
