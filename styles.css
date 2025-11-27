@@ -133,6 +133,7 @@ a:hover {
     /* 2. Menu Toggle: SHOW THE HAMBURGER (Fixes Issue #1) */
     .menu-toggle {
         display: block; /* Overrides the desktop 'display: none;' */
+        width: 100%;
         color: white; /* Ensures the ☰ is white against the dark background */
         background: none;
         border: none;
