@@ -87,7 +87,7 @@ a:hover {
     justify-content: space-between; /* Pushes logo left, menu right */
     height: 60px; 
     position: fixed; /* Keeps it at the top */
-    width: 100%;
+    width: auto;
     top: 0;
     z-index: 1000;
 }
@@ -125,7 +125,7 @@ a:hover {
     .main-menu-container {
         /* Re-apply flex properties to handle two main items: Logo and Button */
         display: flex; 
-        justify-content: center; /* Pushes the logo left, button right */
+        justify-content: space-between; /* Pushes the logo left, button right */
         align-items: center; 
         /* Ensure position is not changed from fixed if you want it sticky */
     }
