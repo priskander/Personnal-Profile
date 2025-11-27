@@ -87,7 +87,7 @@ a:hover {
     justify-content: space-between; /* Pushes logo left, menu right */
     height: 60px; 
     position: fixed; /* Keeps it at the top */
-    width: 100%;
+    width: auto;
     top: 0;
     z-index: 1000;
 }
@@ -133,7 +133,7 @@ a:hover {
     /* 2. Menu Toggle: SHOW THE HAMBURGER (Fixes Issue #1) */
     .menu-toggle {
         display: block; /* Overrides the desktop 'display: none;' */
-        width: 100%;
+        width: auto;
         color: white; /* Ensures the ☰ is white against the dark background */
         background: none;
         border: none;
@@ -147,7 +147,7 @@ a:hover {
     .main-nav-list { 
         display: none; /* Crucial: Hides the menu by default on mobile */
         flex-direction: column; /* Stacks items vertically */
-        width: 100%; 
+        width: auto; 
         position: absolute; /* Takes it out of the normal flow */
         top: 60px; /* Position it below the 60px high main bar */
         left: 0;
