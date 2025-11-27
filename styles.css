@@ -62,125 +62,88 @@ a:hover {
   text-decoration: none;
 }
 
-/* HEADER & NAV */
-/* This is the missing piece for the dark bar and containment */
+/* HEADER & NAV *//* --- Desktop/Default Styles (Fixes items outside the menu) --- */
+
+/* 1. Main Container: Creates the dark bar and aligns logo/menu */
 .main-menu-container {
-    background-color: #2c3e57; /* <-- Added: Dark background for the main bar */
+    background-color: #2c3e57; /* Dark background is now present on desktop */
     color: white;
     padding: 0 20px;
-    display: flex; /* <-- Added: To align logo and menu list */
+    display: flex; 
     align-items: center;
     justify-content: space-between;
-    height: 60px; /* Set a fixed height for better mobile positioning */
+    height: 60px; /* Fixed height helps with absolute positioning later */
+    position: fixed; /* Keeps the menu bar visible when scrolling */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure it is on top of other elements */
 }
 
-/* Ensure these desktop list styles are correctly targeted */
-.main-menu-container ul { /* Targeting the ul inside the container */
-    list-style: none;
+/* 2. Menu Toggle: Hidden by default on desktop */
+.menu-toggle {
+    display: none; /* Correctly hides the button on desktop/large screens */
+}
+
+/* 3. Navigation List: Aligns items horizontally */
+.main-nav-list {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Ensures horizontal display on desktop */
-    overflow: hidden;
+    display: flex; /* Makes the list items horizontal on desktop */
 }
 
-/* Fix for the generic list item margin */
-.main-menu-container li { 
-    margin: 0;
-}
-
-/* Ensure links are block-level inside the li for good padding */
-.main-menu-container a {
-    display: block; /* MUST be block or inline-block for padding to work vertically */
-    padding: 18px 15px; /* Adjust padding to fit the 60px height (e.g., 18px top/bottom) */
+/* 4. Navigation Links: Ensures entire area is clickable */
+.main-nav-list li a {
+    display: block; 
+    padding: 18px 15px; /* Ensures vertical alignment in the 60px bar */
     text-decoration: none;
-    color: white; /* Change link color to white for the dark bar */
-    border: none; /* Remove conflicting borders */
+    color: white; /* Ensures text is visible on the dark bar */
+    transition: background-color 0.3s;
 }
 
-/* Correct the menu-toggle for desktop */
-.menu-toggle {
-    display: none; 
-}.main-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  overflow: hidden;
-}
-nav ul li {
-  margin: 5px;
-  margin-right: -5px;
-}
-nav a {
-  display: inline;
-  padding: 1px 15px 1px 1px;
-  text-decoration: none;
-  color: #2c3e57;
-  border-top: 1px solid #efac2f;
-}
-nav a:hover {
-  text-decoration: none;
-  background-color: #2c3e57;
-  color: #efac2f;
-  border-bottom: 2px solid #efac2f;
+.main-nav-list li a:hover,
+.main-nav-list li a.active {
+    background-color: #e74c3c;
 }
 
-/* styles.css (at the bottom of the file) */
+/* --- Mobile Styles (@media query for screens <= 750px) --- */
 
-/* When the screen is 750px or smaller... */
-@media (max-width: 750px) { /* Adjusting breakpoint to match body max-width */
+@media (max-width: 750px) { 
     
-    /* 1. Show the Toggle Button */
+    /* 1. Show the Toggle Button (Fixes invisible hamburger) */
     .menu-toggle {
-        display: block; 
+        display: block; /* Shows the hamburger icon on mobile */
+        color: white; /* Icon is white against the dark container background */
         background: none;
         border: none;
-        color: white; /* It is safe to use white now that the container is dark */
         font-size: 24px;
         cursor: pointer;
         padding: 10px;
     }
     
-    /* 2. Change Nav Container Layout (No changes needed, but ensure it's still dark) */
-    .main-menu-container {
-        justify-content: space-between;
-        /* Ensure background-color is set here if you want a different one */
-    }
-    
-    /* 3. Stack the Menu Items Vertically */
-    .main-nav-list { /* Assuming you use class="main-nav-list" in HTML */
-        display: none; 
-        flex-direction: column; 
+    /* 2. Menu List: Hidden by default and stacked vertically */
+    .main-nav-list {
+        display: none; /* Crucial: Hides the menu by default */
+        flex-direction: column; /* Stacks items vertically */
         width: 100%; 
         position: absolute; 
-        top: 60px; /* Aligns perfectly below the 60px high main-menu-container */
+        top: 60px; /* Position right under the 60px main bar */
         left: 0;
-        background-color: #34495e; 
+        background-color: #34495e; /* Background for the dropdown menu */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     
-    /* 4. Ensure Links Take Full Width */
+    /* 3. Menu Links: Full width and left-aligned */
     .main-nav-list li a {
-        display: block; /* Crucial for vertical stack */
-        padding: 10px 20px;
+        padding: 15px 20px;
         text-align: left; 
-        border-bottom: 1px solid #496279; 
-        color: white; /* Ensure text is white on the dark vertical menu */
+        border-bottom: 1px solid #496279;
     }
 
-    /* 5. Mobile Menu Active State (Toggled Open) */
+    /* 4. JavaScript Toggled State: Makes the menu visible */
     .main-nav-list.is-open {
         display: flex;
     }
-
-    /* Remove the conflicting generic nav rules for mobile */
-    /* This rule below is unnecessary and may cause conflicts: */
-    /* @media (max-width: 600px) {
-      nav ul {
-        justify-content: center;
-        margin-bottom: 20px;
-        border-bottom: 1px solid #333;
-      }
-    } */
 }
 @media (max-width: 600px) {
   header {
