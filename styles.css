@@ -111,49 +111,60 @@ nav a:hover {
 
 /* styles.css (at the bottom of the file) */
 
-/* When the screen is 600px or smaller... */
-@media (max-width: 600px) {
+/* When the screen is 750px or smaller... */
+@media (max-width: 750px) { /* Adjusting breakpoint to match body max-width */
     
     /* 1. Show the Toggle Button */
     .menu-toggle {
-        display: block; /* Show the button */
+        display: block; 
         background: none;
         border: none;
-        color: white;
+        color: white; /* It is safe to use white now that the container is dark */
         font-size: 24px;
         cursor: pointer;
         padding: 10px;
     }
     
-    /* 2. Change Nav Container Layout */
+    /* 2. Change Nav Container Layout (No changes needed, but ensure it's still dark) */
     .main-menu-container {
-        /* Remove space-between; now we'll stack things vertically or just align */
-        justify-content: space-between; 
+        justify-content: space-between;
+        /* Ensure background-color is set here if you want a different one */
     }
     
     /* 3. Stack the Menu Items Vertically */
-    .main-nav-list {
-        display: none; /* Crucial: Hide the entire menu list by default */
-        flex-direction: column; /* Force items to stack vertically */
-        width: 100%; /* Make the menu take full width */
-        position: absolute; /* Position it below the header bar */
-        top: 60px; /* Adjust this to sit right below your header height */
+    .main-nav-list { /* Assuming you use class="main-nav-list" in HTML */
+        display: none; 
+        flex-direction: column; 
+        width: 100%; 
+        position: absolute; 
+        top: 60px; /* Aligns perfectly below the 60px high main-menu-container */
         left: 0;
-        background-color: #34495e; /* Match container background or choose a new one */
+        background-color: #34495e; 
     }
     
     /* 4. Ensure Links Take Full Width */
     .main-nav-list li a {
+        display: block; /* Crucial for vertical stack */
         padding: 10px 20px;
-        text-align: left; /* Align text to the left for better reading */
-        border-bottom: 1px solid #496279; /* Add a separator line */
+        text-align: left; 
+        border-bottom: 1px solid #496279; 
+        color: white; /* Ensure text is white on the dark vertical menu */
     }
 
     /* 5. Mobile Menu Active State (Toggled Open) */
-    /* This class is added via JavaScript (see Step 3) */
     .main-nav-list.is-open {
-        display: flex; /* Show the menu when the .is-open class is present */
+        display: flex;
     }
+
+    /* Remove the conflicting generic nav rules for mobile */
+    /* This rule below is unnecessary and may cause conflicts: */
+    /* @media (max-width: 600px) {
+      nav ul {
+        justify-content: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #333;
+      }
+    } */
 }
 @media (max-width: 600px) {
   header {
