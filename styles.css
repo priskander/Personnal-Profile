@@ -117,6 +117,23 @@ nav a:hover {
   color: #efac2f;
   border-bottom: 2px solid #efac2f;
 }
+
+/* MAIN */
+main img {
+  width: 100%;
+  margin-right: 10px;
+  padding: 0px;
+  vertical-align: middle;
+  float: left;
+  object-fit: fill;
+  clip-path: ellipse(closest-side farthest-side at 50% 50%);
+}
+main p {
+  margin: 0px;
+  padding: 0px;
+  display: inline-flex;
+}
+
 /* --- Mobile Styles (@media query for screens <= 750px) --- */
 @media (max-width: 750px) { 
     
@@ -224,21 +241,6 @@ nav a:hover {
   }
 }
 
-/* MAIN */
-main img {
-  width: 100%;
-  margin-right: 10px;
-  padding: 0px;
-  vertical-align: middle;
-  float: left;
-  object-fit: fill;
-  clip-path: ellipse(closest-side farthest-side at 50% 50%);
-}
-main p {
-  margin: 0px;
-  padding: 0px;
-  display: inline-flex;
-}
 
 /* FOOTER */
 footer {
