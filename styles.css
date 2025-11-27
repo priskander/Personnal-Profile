@@ -159,16 +159,21 @@ nav a:hover {
 /* --- Mobile Styles (@media query for screens <= 750px) --- */
 
 @media (max-width: 750px) { 
-    
+    .main-menu-container {
+    /* Ensure this is present to align the logo and the button */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    }
     /* 1. Show the Toggle Button (Fixes invisible hamburger) */
     .menu-toggle {
         display: block; /* Shows the hamburger icon on mobile */
         color: white; /* Icon is white against the dark container background */
-        background: none;
+        background: transparent;
         border: none;
         font-size: 24px;
         cursor: pointer;
-        padding: 10px;
+        padding: 0 10px;
     }
     
     /* 2. Menu List: Hidden by default and stacked vertically */
