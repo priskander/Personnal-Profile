@@ -78,8 +78,8 @@ header p {
   font-size: 20px;
 }
 
-nav ul {
-  list-style-type: none;
+.main-menu ul {
+  list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
