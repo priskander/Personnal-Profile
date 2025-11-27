@@ -108,9 +108,23 @@
             All rights Reserved.</small></p>
         <p>Site last updated: <time datetime="DD-MM-YYYY">28-07-2025</time></p>
     </footer>
+    <script>
+        const toggleButton = document.querySelector('.menu-toggle');
+        const navList = document.getElementById('main-nav');
+
+        toggleButton.addEventListener('click', () => {
+            // Toggles the 'is-open' class on the menu list
+            navList.classList.toggle('is-open');
+
+            // Accessibility improvement: Update the aria-expanded attribute
+            let isExpanded = toggleButton.getAttribute('aria-expanded') === 'true' || false;
+            toggleButton.setAttribute('aria-expanded', !isExpanded);
+        });
+    </script>
 </body>
 
 </html>
+
 
 
 
