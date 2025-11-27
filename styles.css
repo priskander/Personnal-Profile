@@ -87,7 +87,7 @@ a:hover {
     justify-content: space-between; /* Pushes logo left, menu right */
     height: 60px; 
     position: fixed; /* Keeps it at the top */
-    width: auto;
+    width: 100%;
     top: 0;
     z-index: 1000;
 }
