@@ -15,20 +15,23 @@
 </head>
 <body>
     <header>
-    <nav class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
-        <h1>My Logo Website</h1>
-        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
-        ☰
-    </button>
-        <ul class="main-nav-list" id="main-nav"> 
-            <li><a href="#About Me" title="view my Homepage" class="active">About</a></li>
-            <li><a href="S.W.O.T.html" title="about me">SWOT</a></li>
-            <li><a href="#" title="view my Calendar">Events</a></li>
-            <li><a href="shop.html" title="view my Shop">Shop</a></li>
-            <li><a href="blog.html" title="view my blog">Blog</a></li>
-            <li><a href="contact.html" title="contact me">Contact</a></li>
-        </ul>
-    </nav>
+        <nav class="main-menu-container">
+            <h1>My Website Logo</h1>
+            
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+                ☰
+            </button>
+            
+            <ul class="main-nav-list" id="main-nav"> 
+                <li><a href="#About Me" title="view my Homepage" class="active">About</a></li>
+                <li><a href="S.W.O.T.html" title="about me">SWOT</a></li>
+                <li><a href="#" title="view my Calendar">Events</a></li>
+                <li><a href="shop.html" title="view my Shop">Shop</a></li>
+                <li><a href="blog.html" title="view my blog">Blog</a></li>
+                <li><a href="contact.html" title="contact me">Contact</a></li>
+            </ul>
+
+        </nav>
     <img src="images/PIUS Logo.jpg" alt="PIUS logo">
     </div>
     </header>
@@ -104,53 +107,25 @@
         <input type="search" name="search" id="search" value="Search Website">
         <button type="submit" value="Search Website">Search</button>
     </main>
-        <footer>
-        <p><small>&copy; 2025 Peter Iskander PI Universal Soldier (PIUS). Built for professional showcase.
-            All rights Reserved.</small></p>
-        <p>Site last updated: <time datetime="DD-MM-YYYY">28-07-2025</time></p>
-    </footer>
+    
     <script>
         const toggleButton = document.querySelector('.menu-toggle');
         const navList = document.getElementById('main-nav');
 
         toggleButton.addEventListener('click', () => {
-            // Toggles the 'is-open' class on the menu list
+            // Toggles the 'is-open' class (which shows/hides the menu in CSS)
             navList.classList.toggle('is-open');
 
-            // Accessibility improvement: Update the aria-expanded attribute
+            // Updates the accessibility attribute
             let isExpanded = toggleButton.getAttribute('aria-expanded') === 'true' || false;
             toggleButton.setAttribute('aria-expanded', !isExpanded);
         });
     </script>
+    <footer>
+        <p><small>&copy; 2025 Peter Iskander PI Universal Soldier (PIUS). Built for professional showcase.
+            All rights Reserved.</small></p>
+        <p>Site last updated: <time datetime="DD-MM-YYYY">28-07-2025</time></p>
+    </footer>
+    
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
