@@ -77,29 +77,46 @@ a:hover {
   text-decoration: none;
 }
 
-/* HEADER & NAV *//* --- Desktop/Default Styles (Fixes items outside the menu) --- */
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+/* --- NAVIGATION MENU (DESKTOP DEFAULT) --- */
+
+.main-menu-container {
+    background-color: #2c3e57; 
+    color: white;
+    padding: 0 20px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; /* Pushes logo left, menu right */
+    height: 60px; 
+    position: fixed; /* Keeps it at the top */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
-nav ul li {
-  margin: 5px;
-  margin-right: -5px;
+
+/* 1. Menu Toggle: HIDDEN on desktop */
+.menu-toggle {
+    display: none; 
 }
-nav a {
-  display: inline;
-  padding: 1px 15px 1px 1px;
-  text-decoration: none;
-  color: #2c3e57;
-  border-top: 1px solid #efac2f;
+
+/* 2. List & Links (Desktop) */
+.main-nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Horizontal alignment */
 }
-nav a:hover {
-  text-decoration: none;
-  background-color: #2c3e57;
-  color: #efac2f;
-  border-bottom: 2px solid #efac2f;
+
+.main-nav-list li a {
+    display: block; 
+    padding: 18px 15px; 
+    text-decoration: none;
+    color: white; 
+    transition: background-color 0.3s;
+}
+
+.main-nav-list li a:hover,
+.main-nav-list li a.active {
+    background-color: #34495e;
 }
 
 /* --- Mobile Styles (@media query for screens <= 750px) --- */
