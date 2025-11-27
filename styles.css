@@ -64,48 +64,60 @@ a:hover {
 
 /* HEADER & NAV *//* --- Desktop/Default Styles (Fixes items outside the menu) --- */
 
-/* 1. Main Container: Creates the dark bar and aligns logo/menu */
-.main-menu-container {
-    background-color: #2c3e57; /* Dark background is now present on desktop */
-    color: white;
-    padding: 0 20px;
-    display: flex; 
-    align-items: center;
-    justify-content: space-between;
-    height: 60px; /* Fixed height helps with absolute positioning later */
-    position: fixed; /* Keeps the menu bar visible when scrolling */
-    width: 100%;
-    top: 0;
-    z-index: 1000; /* Ensure it is on top of other elements */
+/* --- Mobile Styles (@media query for screens <= 750px) --- */
+@media (max-width: 750px) { 
+    
+    /* 1. Nav Container: Align logo and toggle button */
+    .main-menu-container {
+        /* Re-apply flex properties to handle two main items: Logo and Button */
+        display: flex; 
+        justify-content: space-between; /* Pushes the logo left, button right */
+        align-items: center; 
+        /* Ensure position is not changed from fixed if you want it sticky */
+    }
+
+    /* 2. Menu Toggle: SHOW THE HAMBURGER (Fixes Issue #1) */
+    .menu-toggle {.menu-toggle {
+    display: block; /* Overrides the desktop 'display: none;' */
+    color: white; /* Ensures the ☰ is white against the dark background */
+    background: none;
+    border: none;
+    font-size: 28px; /* Larger icon for mobile tapping */
+    padding: 0 15px; /* Add padding to the side */
+    cursor: pointer;
+    z-index: 1001; /* Ensure button is clickable over menu list */
 }
 
-/* 2. Menu Toggle: Hidden by default on desktop */
-.menu-toggle {
-    display: none; /* Correctly hides the button on desktop/large screens */
-}
+/* 3. Menu List: HIDE THE LIST (Fixes Issue #2) */
+    .main-nav-list { 
+        display: none; /* Crucial: Hides the menu by default on mobile */
+        flex-direction: column; /* Stacks items vertically */
+        width: 100%; 
+        position: absolute; /* Takes it out of the normal flow */
+        top: 60px; /* Position it below the 60px high main bar */
+        left: 0;
+        background-color: #34495e; 
+    }
+    
+    /* 4. Menu Links: Full width for easy tapping */
+    .main-nav-list li a {
+        padding: 15px 20px;
+        text-align: left; 
+        border-bottom: 1px solid #496279;
+        color: white;
+    }
 
-/* 3. Navigation List: Aligns items horizontally */
-.main-nav-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex; /* Makes the list items horizontal on desktop */
-}
+    /* 5. Logo Styling (Optional: Tweak logo size for mobile) */
+    .main-menu-container h1 {
+        font-size: 1.2em;
+        padding: 0 15px;
+    }
 
-/* 4. Navigation Links: Ensures entire area is clickable */
-.main-nav-list li a {
-    display: block; 
-    padding: 18px 15px; /* Ensures vertical alignment in the 60px bar */
-    text-decoration: none;
-    color: white; /* Ensures text is visible on the dark bar */
-    transition: background-color 0.3s;
+    /* JavaScript Toggled State: Makes the menu visible */
+    .main-nav-list.is-open {
+        display: flex;
+    }
 }
-
-.main-nav-list li a:hover,
-.main-nav-list li a.active {
-    background-color: #e74c3c;
-}
-
 /* --- Mobile Styles (@media query for screens <= 750px) --- */
 
 @media (max-width: 750px) { 
