@@ -348,6 +348,7 @@ button {
 }
 footer {
   display: flex;
+  background-color: #e0dfdf;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
