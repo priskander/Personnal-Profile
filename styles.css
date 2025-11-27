@@ -132,15 +132,15 @@ a:hover {
     }
 
     /* 2. Menu Toggle: SHOW THE HAMBURGER (Fixes Issue #1) */
-    .menu-toggle {.menu-toggle {
-    display: block; /* Overrides the desktop 'display: none;' */
-    color: white; /* Ensures the ☰ is white against the dark background */
-    background: none;
-    border: none;
-    font-size: 28px; /* Larger icon for mobile tapping */
-    padding: 0 15px; /* Add padding to the side */
-    cursor: pointer;
-    z-index: 1001; /* Ensure button is clickable over menu list */
+    .menu-toggle {
+        display: block; /* Overrides the desktop 'display: none;' */
+        color: white; /* Ensures the ☰ is white against the dark background */
+        background: none;
+        border: none;
+        font-size: 28px; /* Larger icon for mobile tapping */
+        padding: 0 15px; /* Add padding to the side */
+        cursor: pointer;
+        z-index: 1001; /* Ensure button is clickable over menu list */
 }
 
 /* 3. Menu List: HIDE THE LIST (Fixes Issue #2) */
