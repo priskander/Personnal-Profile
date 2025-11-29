@@ -118,6 +118,59 @@ a:hover {
     background-color: #34495e;
 }
 
+.connect-section {
+    padding: 50px 20px;
+    text-align: center; /* Centers h2, p, and the contact container */
+    max-width: 900px;
+    margin: 0 auto; /* Centers the whole section on the page */
+}
+
+.connect-section h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #333; /* The underlined style */
+    display: inline-block; /* Crucial: Shrinks border to fit text width */
+    margin-bottom: 15px;
+}
+
+.connect-motto {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.contact-links-container {
+    display: flex; /* Arranges the contact items horizontally */
+    justify-content: center; /* Centers the group of links */
+    flex-wrap: wrap; /* Allows links to wrap on small screens */
+    gap: 30px; /* Space between each contact item */
+}
+
+.contact-item {
+    display: flex; /* Arranges icon and text horizontally */
+    align-items: center; /* Vertically aligns the icon and text */
+    font-size: 1em;
+    color: #555;
+}
+
+.contact-item .icon {
+    font-size: 1.2em; /* Size of the icon */
+    color: #777; /* Color of the icon */
+    margin-right: 8px; /* Space between the icon and the text */
+}
+
+.contact-item a {
+    color: #555; /* Link color */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-item a:hover {
+    color: #2092C4; /* Highlight color on hover */
+}
+
 /* --- Mobile Styles (@media query for screens <= 750px) --- */
 @media (max-width: 750px) { 
     
