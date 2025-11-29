@@ -169,7 +169,6 @@ a:hover {
 }
 
 .contact-item a {
-    color: #555; /* Link color */
     text-decoration: none;
     transition: color 0.2s;
 }
