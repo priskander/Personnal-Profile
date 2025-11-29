@@ -125,6 +125,84 @@ a:hover {
     background-color: #34495e;
 }
 
+/* --- Global Container and Heading --- */
+.core-competencies {
+    padding: 60px 20px;
+    background-color: #ffffff; /* Ensure white background */
+    font-family: Arial, sans-serif;
+}
+
+.core-competencies h2 {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 5px;
+    text-align: left; /* Match the alignment in the image */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px; /* Adjust padding for alignment */
+}
+
+.heading-separator {
+    /* Style the subtle horizontal line under the heading */
+    width: 100px; 
+    height: 3px;
+    background-color: #dee2e6; /* Light gray line color */
+    border: none;
+    margin: 5px auto 40px 10px; /* Align with h2 and add bottom spacing */
+    max-width: 100px;
+}
+
+/* --- Grid Layout (Flexbox) --- */
+.competencies-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Space between columns */
+    max-width: 1200px; /* Center content like a standard website container */
+    margin: 0 auto;
+}
+
+/* --- Individual Competency Item --- */
+.competency-item {
+    flex: 1; /* Allows columns to take equal space */
+    min-width: 280px; /* Prevents columns from getting too narrow on small screens */
+    text-align: left;
+}
+
+.competency-item h3 {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: #1a202c;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.competency-item p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #6c757d; /* Muted text color for description */
+}
+
+/* --- Icon Styling --- */
+.icon-container {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+}
+
+.icon-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Responsive Design for Mobile --- */
+@media (max-width: 768px) {
+    .competencies-grid {
+        /* Stack columns vertically on smaller screens */
+        flex-direction: column;
+    }
+}
 
 /* --- Main Container & Heading Styling --- */
 .technical-proficiencies {
