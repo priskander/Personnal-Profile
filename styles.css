@@ -84,7 +84,8 @@ a:hover {
     padding: 0 20px;
     display: flex; 
     align-items: center;
-    justify-content: space-between; /* Pushes logo left, menu right */
+    justify-content: flex-start; /* Pushes logo left, menu right */
+    gap: 20px; /* Adds space between logo and the menu start. */
     height: 60px; 
     position: fixed; /* Keeps it at the top */
     width: auto;
@@ -103,6 +104,12 @@ a:hover {
     margin: 0;
     padding: 0;
     display: flex; /* Horizontal alignment */
+    width: 100%; /* Forces the menu block to use all available horizontal space. */
+}
+
+.main-nav-list li {
+    flex-grow: 1;
+    text-align: center;
 }
 
 .main-nav-list li a {
