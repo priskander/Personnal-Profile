@@ -143,9 +143,11 @@ a:hover {
 
 .contact-links-container {
     display: flex; /* Arranges the contact items horizontally */
-    justify-content: center; /* Centers the group of links */
-    flex-wrap: wrap; /* Allows links to wrap on small screens */
-    gap: 30px; /* Space between each contact item */
+    justify-content: flex-start; /* Aligns items to the left */
+    flex-wrap: wrap; /* Allows wrapping if the screen is too small */
+    gap: 30px; /* Space between the email, phone, and social icons */
+    margin: 20px 0;
+    text-align: left; /* Reset alignment for content inside */
 }
 
 .contact-item {
