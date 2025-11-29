@@ -125,6 +125,60 @@ a:hover {
     background-color: #34495e;
 }
 
+
+/* --- Main Container & Heading Styling --- */
+.technical-proficiencies {
+    padding: 40px 20px; /* Adjust padding as needed */
+    text-align: center;
+}
+
+.technical-proficiencies h2 {
+    font-size: 2em; /* Ensure the heading is prominent */
+    font-weight: 700;
+    color: #1a202c; /* Dark text color */
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows badges to wrap on smaller screens */
+    justify-content: center;
+    gap: 15px; /* Spacing between the badges */
+}
+
+/* --- Badge Component Styling --- */
+.skill-badge {
+    padding: 8px 18px;
+    border-radius: 20px; /* Highly rounded corners (Pill shape) */
+    font-size: 0.95em;
+    font-weight: 500;
+    white-space: nowrap; /* Prevents text from breaking inside the badge */
+    cursor: default;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+/* Style for Primary (Highlighted) Badges */
+.primary-blue {
+    background-color: #e0f2ff; /* Very light blue background */
+    color: #0c4a6e; /* Darker blue text */
+    border: 1px solid #93c5fd; /* Subtle blue border */
+    /* Optional: Subtle shadow to make it pop */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); 
+}
+
+/* Style for Secondary (Standard) Badges */
+.secondary-grey {
+    background-color: #f3f4f6; /* Very light grey background */
+    color: #4b5563; /* Medium grey text */
+    border: 1px solid #e5e7eb; /* Light grey border */
+}
+
+/* Optional Hover Effect for interactivity */
+.skill-badge:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
 .connect-section {
     padding: 50px 20px;
     text-align: center; /* Centers h2, p, and the contact container */
