@@ -161,7 +161,6 @@ a:hover {
     display: flex; /* Arranges icon and text horizontally */
     align-items: center; /* Vertically aligns the icon and text */
     font-size: 1em;
-    color: #555;
 }
 
 .contact-item .icon {
