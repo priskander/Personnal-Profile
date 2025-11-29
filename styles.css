@@ -150,7 +150,7 @@ a:hover {
 
 .contact-links-container {
     display: flex; /* Arranges the contact items horizontally */
-    justify-content: flex-start; /* Aligns items to the left */
+    justify-content: flex; /* Aligns items to the left */
     flex-wrap: wrap; /* Allows wrapping if the screen is too small */
     gap: 30px; /* Space between the email, phone, and social icons */
     margin: 20px 0;
