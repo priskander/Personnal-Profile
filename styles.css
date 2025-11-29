@@ -179,6 +179,46 @@ a:hover {
 }
 
 
+.video-container {
+    /* Set max width to prevent the video from becoming too large on desktops */
+    max-width: 800px; 
+    margin: 0 auto; /* Center the video container on the page */
+    padding: 20px 0;
+}
+
+.video-wrapper {
+    /* 1. Set the container's position */
+    position: relative;
+    
+    /* 2. Key to responsiveness: Use padding-bottom to define the aspect ratio (height) */
+    /* 9 / 16 * 100 = 56.25% (Standard 16:9 widescreen ratio) */
+    padding-bottom: 56.25%; 
+    
+    /* 3. The width of the container is 100% of its parent (.video-container) */
+    width: 100%;
+    
+    /* 4. Hide anything that might spill over (though it shouldn't) */
+    overflow: hidden; 
+}
+
+.video-wrapper iframe {
+    /* 5. Force the iframe to occupy the full dimensions of the reserved space */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Ensure any fixed width/height attributes are overridden */
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+/* Optional: If you need a different aspect ratio, change padding-bottom: */
+/* For 4:3 ratio, use: padding-bottom: 75%; */
+/* For 1:1 square ratio, use: padding-bottom: 100%; */
+
+
 .connect-section {
     padding: 50px 20px;
     text-align: center; /* Centers h2, p, and the contact container */
