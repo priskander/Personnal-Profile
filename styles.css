@@ -231,6 +231,41 @@ a:hover {
     color: #2092C4; /* Highlight color on hover */
 }
 
+.site-footer {
+    /* Set the gray background color */
+    background-color: #e0e0e0; 
+    padding: 20px 0; /* Add vertical padding */
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding is included in the total width */
+    font-family: Arial, sans-serif; /* Use a common, readable font */
+}
+
+.footer-content-wrapper {
+    /* Constrain the content width (e.g., to match your main site width) */
+    max-width: 1200px; 
+    margin: 0 auto; /* Center the content wrapper */
+    padding: 0 15px; /* Add horizontal padding inside the wrapper */
+    text-align: center; /* Center all text lines */
+}
+
+.copyright-line {
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 5px; /* Spacing between lines */
+    color: #333; /* Dark text color */
+}
+
+.update-line {
+    font-size: 0.85em;
+    margin-top: 5px;
+    color: #555; /* Slightly lighter text color */
+}
+
+/* Ensure the text breaks correctly instead of extending infinitely */
+.footer-content-wrapper p {
+    word-wrap: break-word;
+}
+
 /* --- Mobile Styles (@media query for screens <= 750px) --- */
 @media (max-width: 750px) { 
     
