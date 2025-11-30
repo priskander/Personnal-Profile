@@ -297,6 +297,144 @@ a:hover {
 /* For 1:1 square ratio, use: padding-bottom: 100%; */
 
 
+/* --- Section and Heading --- */
+.timeline-section {
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline-section h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee; /* Subtle line under the header */
+    padding-bottom: 10px;
+}
+
+/* --- Timeline Container (Ensures Items Stack) --- */
+.timeline-container {
+    padding-left: 10px; /* Space for the date column */
+}
+
+/* --- Individual Item Layout (Flexbox for Date, Line, and Content) --- */
+.timeline-item {
+    display: flex;
+    margin-bottom: 30px; /* Vertical spacing between items */
+    align-items: flex-start; /* Aligns the dot/content to the top of the date */
+}
+
+/* --- Left Column: Date --- */
+.timeline-date {
+    width: 150px; /* Fixed width for the dates */
+    flex-shrink: 0;
+    padding-top: 2px;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #495057; /* Slightly lighter than the text */
+    text-align: right;
+    padding-right: 20px; /* Space between date and the line */
+}
+
+/* --- Center Column: Dot and Line --- */
+.timeline-dot-connector {
+    position: relative;
+    width: 2px; /* Width of the vertical line */
+    background-color: #dee2e6; /* Line color */
+    flex-shrink: 0;
+    height: auto;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -7px; /* Centers the dot on the line */
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-color: #fff; /* White center */
+    border: 3px solid #6c757d; /* Outer ring color (as seen in the image) */
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.timeline-line {
+    /* Vertical line extends the full height of the item */
+    height: 100%; 
+    width: 100%;
+    display: block;
+}
+
+/* --- Right Column: Content --- */
+.timeline-content {
+    flex-grow: 1; /* Takes up the remaining space */
+    padding-left: 20px; /* Space between the line and the content */
+    padding-top: 0; /* Align content with the dot */
+}
+
+.timeline-content .job-title {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 2px 0;
+}
+
+.timeline-content .company {
+    font-size: 0.9em;
+    font-weight: normal;
+    color: #6c757d;
+    margin: 0 0 5px 0;
+}
+
+.timeline-content .description {
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #495057;
+    margin: 0;
+}
+
+/* Hide the line on the last item */
+.last-item .timeline-line {
+    display: none;
+}
+
+/* --- Footer Text --- */
+.timeline-footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #999;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 600px) {
+    .timeline-item {
+        /* On small screens, dates can stack above the content */
+        flex-direction: column; 
+    }
+    
+    .timeline-date {
+        width: 100%;
+        text-align: left; /* Align dates back to the left */
+        margin-bottom: 10px;
+        padding-right: 0;
+        padding-left: 20px; /* Keep alignment neat */
+    }
+
+    .timeline-dot-connector {
+        /* Move the line/dot to the very left edge */
+        margin-left: 0;
+        position: absolute;
+        left: 20px;
+        height: 100%;
+    }
+    
+    .timeline-content {
+        padding-left: 40px; /* Push content away from the vertical line */
+    }
+}
+
 .connect-section {
     padding: 50px 20px;
     text-align: center; /* Centers h2, p, and the contact container */
