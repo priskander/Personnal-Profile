@@ -4,7 +4,11 @@ body > header {
   padding-bottom: 10px;
 }
 
+/* Ensure the HEADER section respects the 90% centering of the wrapper */
 .page-wrapper header {
+    /* If the header is the first thing inside .page-wrapper, 
+       we need to remove the horizontal padding that was applied globally 
+       to .page-wrapper header, section, main. */
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
@@ -164,7 +168,7 @@ a:hover {
     font-size: 2.2em;
     font-weight: 700;
     color: #1a202c;
-    margin-bottom: 5px;
+    margin: 0;
     margin-left: 0;
     text-align: left; /* Match the alignment in the image */
 }
@@ -176,7 +180,7 @@ a:hover {
     background-color: #dee2e6;
     border: none;
     /* FIX: Set margin-left to 0 to align with the left edge of the section */
-    margin: 5px 0 40px 0px; 
+    margin: 0 0 0 0; 
     max-width: 100px;
 }
 
@@ -285,8 +289,12 @@ a:hover {
 .video-container {
     /* Set max width to prevent the video from becoming too large on desktops */
     max-width: 800px; 
-    margin: 0 auto; /* Center the video container on the page */
+    /* FIX: Align the video container to the LEFT edge of the 90% page-wrapper */
+    margin: 0 0 0 0; 
     padding: 20px 0;
+    
+    /* Ensure the container takes full width if needed to align the edge */
+    width: 100%; 
 }
 
 .video-wrapper {
