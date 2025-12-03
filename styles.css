@@ -173,9 +173,10 @@ a:hover {
     /* Style the subtle horizontal line under the heading */
     width: 100px; 
     height: 3px;
-    background-color: #dee2e6; /* Light gray line color */
+    background-color: #dee2e6;
     border: none;
-    margin: 5px 0 40px 0px; /* Align with h2 and add bottom spacing */
+    /* FIX: Set margin-left to 0 to align with the left edge of the section */
+    margin: 5px 0 40px 0px; 
     max-width: 100px;
 }
 
@@ -458,7 +459,9 @@ a:hover {
 }
 
 .connect-section {
-    padding: 50px 20px;
+    /* OLD: padding: 50px 20px; (This was incorrect due to the wrapper) */
+    /* NEW: Use 50px vertical, 0 horizontal */
+    padding: 50px 0;
     text-align: center; /* Centers h2, p, and the contact container */
 }
 
@@ -479,7 +482,7 @@ a:hover {
 
 .contact-links-container {
     display: flex; /* Arranges the contact items horizontally */
-    justify-content: center; /* Aligns items to the left */
+    justify-content: center; /* Ensure the links are centered */
     flex-wrap: wrap; /* Allows wrapping if the screen is too small */
     gap: 30px; /* Space between the email, phone, and social icons */
     margin: 20px 0;
@@ -534,25 +537,6 @@ a:hover {
     color: #333; /* Dark text color */
 }
 
-/* Apply consistent side padding to all sections */
-.core-competencies,
-.technical-proficiencies,
-.connect-section,
-.timeline-section {
-    /* Adjust padding to provide space inside the 90% wrapper */
-    padding-left: 15px;
-    padding-right: 15px;
-    /* Keep existing vertical padding (e.g., padding: 60px 20px;) but replace 20px with 0 */
-    /* Example for Core Competencies: */
-    /* OLD: padding: 60px 20px; */
-    padding: 60px 0; /* Keep the vertical padding, but remove horizontal padding */
-}
-
-/* Then, re-introduce the padding specifically on the inner elements */
-.core-competencies h2 {
-    /* Keep padding-left to align the heading */
-    padding-left: 10px; 
-}
 
 /* --- Mobile Styles (@media query for screens <= 750px) --- */
 @media (max-width: 750px) { 
@@ -703,18 +687,22 @@ a:hover {
 /* MAIN */
 main img {
   width: 100%;
-  max-width: 250px;
+  max-width: 250px; /* Constrain profile pic size */
   height: auto;
-  margin: 0 auto 20px; /* Center the image */
-  margin-bottom: 20px;
+  /* FIX: Ensure it is centered and not floated */
+  margin: 0 auto 20px; 
   padding: 0px;
+  vertical-align: middle;
+  /* REMOVE float: left; */
+  display: block; /* Allows margin: auto to center it */
   object-fit: fill;
   clip-path: ellipse(closest-side farthest-side at 50% 50%);
 }
+
 main p {
   margin: 0px;
   padding: 0px;
-  display: inline-flex;
+  display: block;
 }
 
 /* FOOTER */
@@ -813,18 +801,6 @@ form button {
   justify-content: center;
   align-content: center;
   align-items: center;
-}
-
-form footer {
-  display: flex;
-  background-color: #e0dfdf;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  flex-direction: column;
-  margin: 0 auto;
-  white-space: nowrap;
 }
 
 form footer p {
