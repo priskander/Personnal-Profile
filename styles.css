@@ -1,9 +1,14 @@
 body > header {
-  vertical-align: middle;
   margin-bottom: 40px;
   border-bottom: 1px solid #333;
   padding-bottom: 10px;
 }
+
+.page-wrapper header {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 h1 {
   line-height: 1.1;
 }
@@ -150,7 +155,7 @@ a:hover {
 
 /* --- Global Container and Heading --- */
 .core-competencies {
-    padding: 60px 20px;
+    padding: 60px 0;
     background-color: #ffffff; /* Ensure white background */
     font-family: Arial, sans-serif;
 }
@@ -160,6 +165,7 @@ a:hover {
     font-weight: 700;
     color: #1a202c;
     margin-bottom: 5px;
+    margin-left: 0;
     text-align: left; /* Match the alignment in the image */
 }
 
@@ -169,7 +175,7 @@ a:hover {
     height: 3px;
     background-color: #dee2e6; /* Light gray line color */
     border: none;
-    margin: 5px auto 40px 10px; /* Align with h2 and add bottom spacing */
+    margin: 5px 0 40px 0px; /* Align with h2 and add bottom spacing */
     max-width: 100px;
 }
 
@@ -697,12 +703,11 @@ a:hover {
 /* MAIN */
 main img {
   width: 100%;
+  max-width: 250px;
   height: auto;
-  margin-right: 20px;
+  margin: 0 auto 20px; /* Center the image */
   margin-bottom: 20px;
   padding: 0px;
-  vertical-align: middle;
-  float: left;
   object-fit: fill;
   clip-path: ellipse(closest-side farthest-side at 50% 50%);
 }
