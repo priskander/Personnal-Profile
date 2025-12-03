@@ -19,8 +19,10 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
 body {
-  width: 90%;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 18px;
@@ -28,6 +30,7 @@ body {
   color: #333;
   padding-top: 40px;
 }
+
 h1, h2, h3 {
   font-family: Helvetica, Arial, sans-serif;
   margin: 5px 0;
@@ -88,7 +91,7 @@ a:hover {
     gap: 20px; /* Adds space between logo and the menu start. */
     height: 60px; 
     position: fixed; /* Keeps it at the top */
-    width: auto;
+    width: 100%;
     top: 0;
     z-index: 1000;
 }
@@ -487,16 +490,16 @@ a:hover {
     color: #2092C4; /* Highlight color on hover */
 }
 
-.site-footer {
+.site-footer-minimized {
     /* Set the gray background color */
     background-color: #e0e0e0; 
-    padding: 20px 0; /* Add vertical padding */
+    padding: 20px 15px; /* Add vertical padding */
     width: 100%;
     box-sizing: border-box; /* Ensures padding is included in the total width */
     font-family: Arial, sans-serif; /* Use a common, readable font */
 }
 
-.footer-content-wrapper {
+.copyright-section {
     /* Constrain the content width (e.g., to match your main site width) */
     max-width: 1200px; 
     margin: 0 auto; /* Center the content wrapper */
@@ -504,10 +507,12 @@ a:hover {
     text-align: center; /* Center all text lines */
 }
 
-.copyright-line {
+.copyright-line, .update-line {
     font-size: 0.9em;
     font-weight: bold;
-    margin-bottom: 5px; /* Spacing between lines */
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    margin: 5px; /* Spacing between lines */
     color: #333; /* Dark text color */
 }
 
