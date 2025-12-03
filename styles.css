@@ -713,14 +713,6 @@ main p {
 }
 
 /* FOOTER */
-footer {
-  background: #f6f6f6;
-  border-top: 1px solid black;
-  margin-top: 50px;
-}
-footer ul {
-  list-style-type: none;
-}
 
 
 /* BLOG */
@@ -755,34 +747,40 @@ main img {
   object-fit: fill;
   clip-path: ellipse(closest-side farthest-side at 50% 50%);
 }
+
 form {
   padding: 30px 50px;
   border: 1px solid #e0dfdf;
   background: #f6f6f6;
 }
-legend {
+
+form legend {
   font-size: 22px;
   font-weight: bold;
   font-family: Helvetica, Arial, sans-serif;
   padding: 0 0 15px;
 }
-fieldset {
+
+form fieldset {
   box-sizing: border-box;
   display: block;
 }
-label,input {
+
+form label,input {
   display: block;
 }
-textarea {
+
+form textarea {
   width: 90%;
   height: 200px;
   padding: 10px;
   resize: both;
 }
+
 form input[type="file"] {
   border: none;
 }
-input,textarea {
+form input,textarea {
   border: none;
   width: 90%;
   margin: 5px 0 15px;
@@ -790,13 +788,15 @@ input,textarea {
   padding: 6px;
   border-radius: 10px;
 }
-button:before {
+
+form button:before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f291";
   padding-right: .25em;
 }
-button {
+
+form button {
   width: 50%;
   font-weight: bold;
   background-color: #2092C4;
@@ -809,7 +809,8 @@ button {
   align-content: center;
   align-items: center;
 }
-footer {
+
+form footer {
   display: flex;
   background-color: #e0dfdf;
   flex-wrap: wrap;
@@ -820,15 +821,18 @@ footer {
   margin: 0 auto;
   white-space: nowrap;
 }
-footer p {
+
+form footer p {
   justify-items: center;
   align-items: center;
 }
-footer a img {
+
+form footer a img {
   max-width: 100%;
   height: auto;
 }
-footer input {
+
+form footer input {
   border: none;
   width: 50%;
   margin: 5px 0 20px;
@@ -836,7 +840,8 @@ footer input {
   padding: 6px;
   border-radius: 10px;
 }
-footer button {
+
+form footer button {
   width: 50%;
   font-weight: bold;
   background-color: #2092C4;
