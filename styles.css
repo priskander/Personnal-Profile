@@ -635,6 +635,39 @@ a:hover {
   }
 }
 
+.site-footer-minimized {
+    /* Background and width setup */
+    background-color: #e0e0e0; /* Matches the gray color from your image */
+    width: 100%;
+    padding: 20px 0; /* Vertical padding */
+    box-sizing: border-box; /* Essential for responsiveness */
+    font-family: Arial, sans-serif;
+}
+
+.copyright-section {
+    /* Contains and centers the text */
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px; /* CRITICAL: Padding on the sides for mobile screens */
+    text-align: center;
+}
+
+.copyright-line {
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+    /* Ensures long names/strings break correctly */
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+}
+
+.update-line {
+    font-size: 0.85em;
+    margin-top: 5px;
+    color: #555;
+}
+
 /* MAIN */
 main img {
   width: 100%;
