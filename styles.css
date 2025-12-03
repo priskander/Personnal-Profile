@@ -492,11 +492,13 @@ a:hover {
 
 .site-footer-minimized {
     /* Set the gray background color */
-    background-color: #e0e0e0; 
-    padding: 20px 15px; /* Add vertical padding */
+    background-color: #e0e0e0;
     width: 100%;
     box-sizing: border-box; /* Ensures padding is included in the total width */
+    padding: 20px 15px; /* Add vertical padding */
     font-family: Arial, sans-serif; /* Use a common, readable font */
+    white-space: normal !important;
+    diplay: block; /* Overrides conflicting 'footer' display:flex; */
 }
 
 .copyright-section {
@@ -514,17 +516,6 @@ a:hover {
     overflow-wrap: break-word;
     margin: 5px; /* Spacing between lines */
     color: #333; /* Dark text color */
-}
-
-.update-line {
-    font-size: 0.85em;
-    margin-top: 5px;
-    color: #555; /* Slightly lighter text color */
-}
-
-/* Ensure the text breaks correctly instead of extending infinitely */
-.footer-content-wrapper p {
-    word-wrap: break-word;
 }
 
 /* --- Mobile Styles (@media query for screens <= 750px) --- */
