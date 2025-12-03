@@ -21,6 +21,7 @@ html {
 }
 
 body {
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -86,6 +87,14 @@ a:hover {
   box-sizing: border-box; /* Essential */
   /* Add padding-top here to clear the fixed nav bar */
   padding-top: 80px; /* Use 80px to safely clear the 60px high nav bar */
+}
+
+/* Apply padding to all sections inside the 90% wrapper */
+.page-wrapper section, 
+.page-wrapper main,
+.page-wrapper header {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .main-menu-container {
@@ -214,7 +223,7 @@ a:hover {
 
 /* --- Main Container & Heading Styling --- */
 .technical-proficiencies {
-    padding: 40px 20px; /* Adjust padding as needed */
+    padding: 40px 0; /* Adjust padding as needed */
     text-align: center;
 }
 
@@ -229,6 +238,7 @@ a:hover {
     display: flex;
     flex-wrap: wrap; /* Allows badges to wrap on smaller screens */
     justify-content: center;
+    padding: 0 15px; /* Add some padding if needed, but the wrapper should handle the main border */
     gap: 15px; /* Spacing between the badges */
 }
 
@@ -307,7 +317,7 @@ a:hover {
 
 /* --- Section and Heading --- */
 .timeline-section {
-    padding: 40px 20px;
+    padding: 40px 0; /* Keep 40px vertical, set horizontal to 0 */
     font-family: Arial, sans-serif;
 }
 
