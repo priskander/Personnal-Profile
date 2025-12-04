@@ -84,15 +84,14 @@ a:hover {
 /* NEW CLASS: Constrains the content but allows nav/footer to be full width */
 .page-wrapper {
   width: 90%; 
-  margin: 0 auto; /* Centers the 90% block */
+  margin: 0 20px 0 20px; /* Centers the 90% block */
   box-sizing: border-box; /* Essential */
   /* Add padding-top here to clear the fixed nav bar */
   padding-top: 80px; /* Use 80px to safely clear the 60px high nav bar */
 }
 
 /* Apply padding to all sections inside the 90% wrapper */
-.page-wrapper section, 
-.page-wrapper main,
+
 
 .main-menu-container {
     background-color: #2c3e57; 
@@ -104,7 +103,7 @@ a:hover {
     gap: 20px; /* Adds space between logo and the menu start. */
     height: 60px; 
     position: fixed; /* Keeps it at the top */
-    width: 100%;
+    width: 90%;
     top: 0;
     z-index: 1000;
     /* The current padding: 0 20px; will push your logo/toggle away from the screen edge.
@@ -121,10 +120,10 @@ a:hover {
 /* 2. List & Links (Desktop) */
 .main-nav-list {
     list-style-type: none;
-    margin: 0;
+    margin: 0 20px 0 20px;;
     padding: 0;
     display: flex; /* Horizontal alignment */
-    width: 100%; /* Forces the menu block to use all available horizontal space. */
+    width: 90%; /* Forces the menu block to use all available horizontal space. */
 }
 
 .main-nav-list li {
@@ -279,7 +278,7 @@ a:hover {
     /* Set max width to prevent the video from becoming too large on desktops */
     max-width: 800px; 
     /* FIX: Align the video container to the LEFT edge of the 90% page-wrapper */
-    margin: 0 auto; 
+    margin: 0 20px 0 20px;
     padding: 20px 0;
 }
 
@@ -480,7 +479,7 @@ a:hover {
     flex-wrap: wrap; /* Allows wrapping if the screen is too small */
     gap: 30px; /* Space between the email, phone, and social icons */
     margin: 20px 0;
-    text-align: left; /* Reset alignment for content inside */
+    text-align: center; /* Reset alignment for content inside */
 }
 
 .contact-item {
@@ -684,7 +683,7 @@ main img {
   max-width: 250px; /* Constrain profile pic size */
   height: auto;
   /* FIX: Ensure it is centered and not floated */
-  margin: 0 auto 20px; 
+  margin: 0; 
   padding: 0px;
   vertical-align: middle;
   float: left;
