@@ -5,14 +5,6 @@ body > header {
 }
 
 /* Ensure the HEADER section respects the 90% centering of the wrapper */
-.page-wrapper header {
-    /* If the header is the first thing inside .page-wrapper, 
-       we need to remove the horizontal padding that was applied globally 
-       to .page-wrapper header, section, main. */
-    margin: 5px 0;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-}
 
 h1 {
   line-height: 1.1;
@@ -102,10 +94,6 @@ a:hover {
 /* Apply padding to all sections inside the 90% wrapper */
 .page-wrapper section, 
 .page-wrapper main,
-.page-wrapper header {
-    padding-left: 20px;
-    padding-right: 20px;
-}
 
 .main-menu-container {
     background-color: #2c3e57; 
@@ -160,29 +148,30 @@ a:hover {
 
 /* --- Global Container and Heading --- */
 .core-competencies {
-    padding: 60px 0;
+    padding: 60px 20px;
     background-color: #ffffff; /* Ensure white background */
     font-family: Arial, sans-serif;
 }
 
 .core-competencies h2 {
-    font-size: 2.2em;
-    font-weight: 700;
-    color: #1a202c;
-    margin: 0;
-    margin-left: 0;
-    text-align: left; /* Match the alignment in the image */
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #1a202c;
+    /* CHANGED: Restored 5px bottom margin for spacing */
+    margin: 0 0 5px 0; 
+    margin-left: 0;
+    text-align: center;
 }
 
 .heading-separator {
-    /* Style the subtle horizontal line under the heading */
-    width: 100px; 
-    height: 3px;
-    background-color: #dee2e6;
-    border: none;
-    /* FIX: Set margin-left to 0 to align with the left edge of the section */
-    margin: 0 0 0 0; 
-    max-width: 100px;
+    /* Style the subtle horizontal line under the heading */
+    width: 100px; 
+    height: 3px;
+    background-color: #dee2e6;
+    border: none;
+    /* CHANGED: Restored vertical margins */
+    margin: 5px 0 40px 0px; 
+    max-width: 100px;
 }
 
 /* --- Grid Layout (Flexbox) --- */
@@ -235,7 +224,7 @@ a:hover {
 
 /* --- Main Container & Heading Styling --- */
 .technical-proficiencies {
-    padding: 40px 0; /* Adjust padding as needed */
+    padding: 40px 20px; /* Adjust padding as needed */
     text-align: center;
 }
 
@@ -291,11 +280,8 @@ a:hover {
     /* Set max width to prevent the video from becoming too large on desktops */
     max-width: 800px; 
     /* FIX: Align the video container to the LEFT edge of the 90% page-wrapper */
-    margin: 0 0 0 0; 
+    margin: 0 auto; 
     padding: 20px 0;
-    
-    /* Ensure the container takes full width if needed to align the edge */
-    width: 100%; 
 }
 
 .video-wrapper {
@@ -333,7 +319,7 @@ a:hover {
 
 /* --- Section and Heading --- */
 .timeline-section {
-    padding: 40px 0; /* Keep 40px vertical, set horizontal to 0 */
+    padding: 40px 20px; /* Keep 40px vertical, set horizontal to 0 */
     font-family: Arial, sans-serif;
 }
 
@@ -470,7 +456,7 @@ a:hover {
 .connect-section {
     /* OLD: padding: 50px 20px; (This was incorrect due to the wrapper) */
     /* NEW: Use 50px vertical, 0 horizontal */
-    padding: 50px 0;
+    padding: 50px 20px;
     text-align: center; /* Centers h2, p, and the contact container */
 }
 
@@ -740,15 +726,6 @@ article h2 {
 
 
 /* CONTACT */
-main img {
-  width: 100%;
-  margin-right: 10px;
-  padding: 0px;
-  vertical-align: middle;
-  float: left;
-  object-fit: fill;
-  clip-path: ellipse(closest-side farthest-side at 50% 50%);
-}
 
 form {
   padding: 30px 50px;
@@ -809,11 +786,6 @@ form button {
   border-radius: 10px;
   justify-content: center;
   align-content: center;
-  align-items: center;
-}
-
-form footer p {
-  justify-items: center;
   align-items: center;
 }
 
