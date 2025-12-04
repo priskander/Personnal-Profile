@@ -9,6 +9,7 @@ body > header {
     /* If the header is the first thing inside .page-wrapper, 
        we need to remove the horizontal padding that was applied globally 
        to .page-wrapper header, section, main. */
+    margin: 5px 0;
     padding-left: 20px !important;
     padding-right: 20px !important;
 }
