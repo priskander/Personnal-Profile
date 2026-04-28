@@ -451,6 +451,9 @@ a:hover {
     }
 }
 
+    .last-item .timeline-line {
+    display: none;
+
 .connect-section {
     /* OLD: padding: 50px 20px; (This was incorrect due to the wrapper) */
     /* NEW: Use 50px vertical, 0 horizontal */
