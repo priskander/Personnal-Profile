@@ -548,16 +548,40 @@ a:hover {
 
     /* 2. Menu Toggle: SHOW THE HAMBURGER (Fixes Issue #1) */
     .menu-toggle {
-        display: block; /* Overrides the desktop 'display: none;' */
-        width: auto;
-        color: white; /* Ensures the ☰ is white against the dark background */
-        background: none;
+        display: flex; /* Overrides the desktop 'display: none;' */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 32px;
+        height: 26px;
+        background: transparent;
         border: none;
-        font-size: 28px; /* Larger icon for mobile tapping */
         padding: 0 15px; /* Add padding to the side */
         cursor: pointer;
         z-index: 1001; /* Ensure button is clickable over menu list */
-}
+    }
+
+    /* The three rounded bars that make up the hamburger icon */
+    .menu-toggle .bar {
+        display: block;
+        width: 24px;
+        height: 3px;
+        background-color: white; /* Bars are white against the dark background */
+        border-radius: 999px; /* Rounded pill shape */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Turns the three bars into an X when the menu is open */
+    .menu-toggle[aria-expanded="true"] .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle[aria-expanded="true"] .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle[aria-expanded="true"] .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 
 /* 3. Menu List: HIDE THE LIST (Fixes Issue #2) */
     .main-nav-list { 
@@ -598,17 +622,6 @@ a:hover {
     justify-content: space-between; 
     align-items: center; 
     }
-    /* 1. Show the Toggle Button (Fixes invisible hamburger) */
-    .menu-toggle {
-        display: block; /* Shows the hamburger icon on mobile */
-        color: white; /* Icon is white against the dark container background */
-        background: transparent;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-        padding: 0 10px;
-    }
-    
     /* 2. Menu List: Hidden by default and stacked vertically */
     .main-nav-list {
         display: none; /* Crucial: Hides the menu by default */
