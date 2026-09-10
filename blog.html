@@ -7,16 +7,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="page-wrapper">
     <header>
-        <nav>
-            <ul>
+        <nav class="main-menu-container">
+            <img src="./images/PIUS Logo.jpg" alt="PIUS logo">
+
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="main-nav-list" id="main-nav">
                 <li><a href="index.html" title="view my Homepage">Home</a></li>
-                <li><a href="#" title="view my Homepage">About</a></li>
-                <li><a href="#" title="view my Homepage">Events</a></li>
-                <li><a href="shop.html" title="view my Homepage">Shop</a></li>
-                <li><a href="blog.html" title="view my blog">Blog</a></li>
+                <li><a href="index.html#About Me" title="view my About Me">About</a></li>
+                <li><a href="S.W.O.T.html" title="about me">SWOT</a></li>
+                <li><a href="#" title="view my Calendar">Events</a></li>
+                <li><a href="shop.html" title="view my Shop">Shop</a></li>
+                <li><a href="blog.html" title="view my blog" class="active">Blog</a></li>
                 <li><a href="contact.html" title="contact me">Contact</a></li>
             </ul>
+            <label for="search"></label>
+            <input type="search" name="search" id="search" placeholder="Search Website">
+            <button type="submit" value="Search Website">Search</button>
         </nav>
         <hgroup>
             <h1>Peter Iskander</h1>
@@ -39,7 +52,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur perferendis laborum sed id animi aspernatur tempore, inventore ea maiores sapiente, saepe repellat ad, et aut. Impedit dignissimos ex repudiandae eligendi?</p>
         </article>
     </main>
-        <footer>
+        <footer class="site-footer-minimized">
         <p><small>&copy; 2025 Peter Iskander PI Universal Soldier (PIUS). All rights Reserved.</small></p>
         <p>Site last updated: <time datetime="DD-MM-YYYY">19-05-2025</time></p>
 
@@ -58,5 +71,19 @@
         <li><a href="https://www.youtube.com/user/enppi2008" title="reach my YouTube channel" target="_blank">YouTube Channel</a></li>
         </ul>
     </footer>
+    </div>
+    <script>
+        const toggleButton = document.querySelector('.menu-toggle');
+        const navList = document.getElementById('main-nav');
+
+        toggleButton.addEventListener('click', () => {
+            // Toggles the 'is-open' class (which shows/hides the menu in CSS)
+            navList.classList.toggle('is-open');
+
+            // Updates the accessibility attribute
+            let isExpanded = toggleButton.getAttribute('aria-expanded') === 'true' || false;
+            toggleButton.setAttribute('aria-expanded', !isExpanded);
+        });
+    </script>
 </body>
 </html>
