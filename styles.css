@@ -453,6 +453,7 @@ a:hover {
 
     .last-item .timeline-line {
     display: none;
+}
 
 .connect-section {
     /* OLD: padding: 50px 20px; (This was incorrect due to the wrapper) */
@@ -509,13 +510,21 @@ a:hover {
 .site-footer-minimized {
     background-color: #2c3e57; /* Same navy as .main-menu-container */
     color: #ffffff;
-    width: 100%;
     box-sizing: border-box; /* Ensures padding is included in the total width */
     padding: 25px 15px; /* Vertical padding */
     font-family: Arial, sans-serif; /* Use a common, readable font */
     white-space: normal !important;
     display: block; /* Overrides conflicting 'footer' display:flex; */
     text-align: center;
+    /* Full-bleed technique: 'body' is constrained to max-width:90% with side
+       margins, so without this the footer's background would only fill that
+       inner column instead of reaching the edges of the viewport like the nav does. */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 /* Generic resets so the varied footer markup across pages (address, ul/li, p)
